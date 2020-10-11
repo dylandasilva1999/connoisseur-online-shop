@@ -19,12 +19,10 @@
     "NodeJS"
   ],
   "author": "Dylan da Silva",
-  "license": "GNU",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/dylandasilva1999/connoisseur-online-shop/issues"
   },
   "homepage": "https://github.com/dylandasilva1999/connoisseur-online-shop#readme",
-  "dependencies": {
-    "http-server": "^0.12.3"
-  }
+ 
 }
