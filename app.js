@@ -24,6 +24,12 @@ app.config(function ($routeProvider) {
     });
 });
 
+app.run(function ($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+    });
+});
+
 app.controller("HomeController", function ($scope) {
     $scope.headerHome = "./templates/components/header-home.html";
 });

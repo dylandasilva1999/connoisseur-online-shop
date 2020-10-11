@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="connoisseur">
 
     <!-- Start of Head -->
     <head>
@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">       
         
         <!-- WEBSITE TITLE -->
-        <title>CNS | Home</title>
+        <title ng-bind="'CNS | ' + title"></title>
         <link rel="icon" href="./assets//img/Colour-Logo.ico">
         
         <!-- JQUERY -->
@@ -35,7 +35,7 @@
     <!-- End of Head -->
 
     <!-- Start of Body -->
-    <body ng-app="connoisseur">
+    <body>
 
         <ng-view></ng-view>
         
