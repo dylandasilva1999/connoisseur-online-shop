@@ -48,4 +48,4 @@ app.controller("ContactController", function ($scope) {
 });
 
 var num = phoneNumbers[i];
-var email = emailAddresses[i]
+var email = emailAddresses[i];

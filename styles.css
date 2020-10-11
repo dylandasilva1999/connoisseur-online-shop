@@ -207,6 +207,10 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
+.active {
+  color: #ef3955;
+}
+
 .logo {
   width: 7%;
   height: 7%;
@@ -286,6 +290,7 @@ HEADER
   background-image: url("./assets/img/thomas-serer-R_0rTS9ENnk-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   width: 110%;
   height: 100vh;
   margin-left: -5%;
@@ -296,6 +301,7 @@ HEADER
   background-image: url("./assets/img/mehdi-thomas-boutdarine-zI23N21e6UM-unsplash.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   width: 110%;
   height: 100vh;
   margin-left: -5%;
