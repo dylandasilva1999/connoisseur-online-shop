@@ -1,0 +1,30 @@
+{
+  "name": "connoisseur-online-shop",
+  "version": "0.0.1",
+  "description": "Connoisseur is a luxury online shoe shop!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylandasilva1999/connoisseur-online-shop.git"
+  },
+  "keywords": [
+    "Luxury",
+    "Shoes",
+    "Connoisseur",
+    "Javascript",
+    "Angular",
+    "NodeJS"
+  ],
+  "author": "Dylan da Silva",
+  "license": "GNU",
+  "bugs": {
+    "url": "https://github.com/dylandasilva1999/connoisseur-online-shop/issues"
+  },
+  "homepage": "https://github.com/dylandasilva1999/connoisseur-online-shop#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
