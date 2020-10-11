@@ -20,7 +20,7 @@
         
         <!-- FONTS -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         
         <!-- BOOTSTRAP AND PAPER KIT-->
         <link rel="stylesheet" href="/assets/css/paper-kit.css">
@@ -35,7 +35,14 @@
     <!-- End of Head -->
 
     <!-- Start of Body -->
-    <body>
+    <body ng-app="connoisseur">
+
+        <div ng-controller="IntroductionController as IntroCtrl" id="main-container" class="container">
+            <div class="row">
+                <h1>{{ IntroCtrl.message }}</h1>
+                <h3>{{ 2 + 2 }}</h3>
+            </div>
+        </div>
         
     </body>
     <!-- End of Body -->
