@@ -29,7 +29,7 @@
         <!-- CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./styles.css">
 
     </head> 
     <!-- End of Head -->
@@ -37,12 +37,7 @@
     <!-- Start of Body -->
     <body ng-app="connoisseur">
 
-        <div ng-controller="IntroductionController as IntroCtrl" id="main-container" class="container">
-            <div class="row">
-                <h1>{{ IntroCtrl.message }}</h1>
-                <h3>{{ 2 + 2 }}</h3>
-            </div>
-        </div>
+        <ng-view></ng-view>
         
     </body>
     <!-- End of Body -->
@@ -52,6 +47,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular-route.js"></script>
 
     <!-- JAVASCRIPT -->
+    <script src="./assets/js/script.js"></script>
     <script src="./app.js"></script>
     <script src="./assets/js/data.js"></script>
         

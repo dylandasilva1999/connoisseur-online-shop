@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/dylandasilva1999/connoisseur-online-shop#readme",
   "dependencies": {
+    "http-server": "^0.12.3",
     "node": "^14.13.1",
     "node-cmd": "^3.0.0"
   }
