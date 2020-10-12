@@ -626,6 +626,29 @@ CONTENT
   color: rgba(0, 0, 0, 1);
 }
 
+.male-female-container {
+  margin-top: 8vh;
+}
+
+.gif {
+  background-color: #ef3955;
+  height: 20vh;
+}
+
+.left {
+  background-image: url("./assets/img/Nike\ Men.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+
+.right {
+  background-image: url("./assets/img/Nike\ Women.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+}
+
 /*
 
 FOOTER
@@ -862,6 +885,9 @@ RESPONSIVE MEDIA QUERIES
   }
   #sticky-footer {
     margin-top: 170vh;
+  }
+  .card {
+    height: 34rem !important;
   }
 }
 
