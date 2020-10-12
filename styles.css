@@ -308,6 +308,17 @@ HEADER
   z-index: -3;
 }
 
+.header-image-contact {
+  background-image: url("./assets/img/kristian-egelund-wwqRpSNBPq4-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 110%;
+  height: 100vh;
+  margin-left: -5%;
+  z-index: -3;
+}
+
 .colour-overlay {
   width: 100%;
   height: 100vh;
@@ -707,7 +718,7 @@ RESPONSIVE MEDIA QUERIES
     width: 100%;
     height: 100vh;
     margin-top: -10vh;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
   }
   #logo-text {
     display: none;
@@ -765,27 +776,15 @@ RESPONSIVE MEDIA QUERIES
 
 /*iPad Pro Landscape*/
 @media screen and (min-width: 1366px) and (max-width: 1919px) {
-  nav {
-    background-color: #1e1e1e;
-  }
   .nav-links {
-    width: 30%;
-    position: absolute;
-    left: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: #1e1e1e;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in;
+    justify-content: space-around;
+    width: 30%;
+    margin-top: 15px;
+    margin-left: 0%;
   }
-  .nav-links li{
-    opacity: 0;
-  }
-  .nav-links li i {
-    margin-right: 15px;
+  .nav-links li {
+    margin-left: 10px;
   }
   .nav-links li a{
     list-style-type: none;
@@ -795,13 +794,15 @@ RESPONSIVE MEDIA QUERIES
     font-weight: 700;
     letter-spacing: 1px;
   }
-  .burger {
-    display: block;
-    position: absolute;
-    margin-left: -88%;
-  }
-  .logo img{
+  .nav-links li i {
     display: none;
+  }
+  .logo {
+    margin-left: 0%;
+  }
+  .logo img {
+    width: 120px;
+    height: 120px;
   }
   .divider {
     display: none;
@@ -811,12 +812,7 @@ RESPONSIVE MEDIA QUERIES
     margin-left: 79%;
   }
   #logo-text {
-    margin-left: 44%;
-    position: absolute;
-    margin-top: -20px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 28px;
+    display: none;
   }
   .header-image {
     height: 100vh;
@@ -839,8 +835,8 @@ RESPONSIVE MEDIA QUERIES
     text-align: left;
     font-size: 16px;
   }
-  button.get-now-btn {
-    width: 40%;
+  button.get-yours-btn {
+    width: 50%;
     font-size: 12px;
   }
   .scroll-down-icon {
@@ -848,6 +844,24 @@ RESPONSIVE MEDIA QUERIES
     height: 50px;
     margin-top: 82vh;
     margin-left: 52%;
+  }
+  .social-media-icons-header img{
+    display: none;
+  }
+  .shoe-image img {
+    height: 80%;
+    width: 85%;
+    margin-top: 5vh;
+  }
+  .header-content {
+    margin-left: 12%;
+  }
+  .search-icon {
+    margin-left: 250px;
+    margin-top: -180px;
+  }
+  #sticky-footer {
+    margin-top: 170vh;
   }
 }
 
