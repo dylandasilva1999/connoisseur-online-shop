@@ -32,10 +32,13 @@ app.run(function ($rootScope) {
 
 app.controller("HomeController", function ($scope) {
     $scope.headerHome = "./templates/components/header-home.html";
+    $scope.footer = "./templates/components/footer.html";
 });
 
 app.controller("ProductsController", function ($scope) {
     $scope.headerProducts = "./templates/components/header-products.html";
+    $scope.shoes = shoesArray;
+    $scope.footer = "./templates/components/footer.html";
 });
 
 app.controller("ContactController", function ($scope) {
@@ -45,6 +48,9 @@ app.controller("ContactController", function ($scope) {
         feedback: "feedback@shoebox.co.za",
         general: "info@shoebox.co.za"
     }
+
+    $scope.headerContact = "./templates/components/header-contact.html";
+    $scope.footer = "./templates/components/footer.html";
 });
 
 var num = phoneNumbers[i];

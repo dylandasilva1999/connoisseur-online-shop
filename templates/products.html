@@ -1,60 +1,66 @@
+<!-- Header Products Page -->
 <div class="col-xl-12" ng-include='headerProducts'></div>
 
+<!-- Shoes Products Container -->
 <div class="container content-products col-xl-10">
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
+
+    <!-- Filter Section -->
+    <div class="col-xl-12 filter-section">
+         <div class="row filter-container">
+            <div class="search-filter col-xl-12">
+              <div class="row filer-container">
+                  <div class="colour col-xl-3">
+                      <select name="colour-dropdown" id="colour-dropdown">
+                          <option value="Colour" disabled selected>Colour</option>
+                          <option value="White">White</option>
+                          <option value="Black">Black</option>
+                          <option value="Blue">Blue</option>
+                          <option value="Pink">Pink</option>
+                          <option value="Green">Green</option>
+                          <option value="Grey">Grey</option>
+                      </select>
+                  </div> <!-- Year Dropdown -->
+                  <div class="gender col-xl-3">
+                      <select name="gender-dropdown" id="gender-dropdown">
+                          <option value="Gender" disabled selected>Gender</option>
+                          <option value="Men's Shoe">Men's Shoe</option>
+                          <option value="Women's Shoe">Women's Shoe</option>
+                      </select>
+                  </div> <!-- Title Dropdown -->
+                  <div class="search col-xl-4">
+                      <form method="post">
+                          <input type="text" placeholder="Search for a shoe" name="search" class="search-bar" id="search">
+                          <button type="submit" class="search"><img src="../assets/img/search.svg" class="search-icon" ></button>
+                      </form>
+                  </div> <!-- Search Bar Field -->
+                  <div class="show-all-btn col-xl-2">
+                      <input type="submit" class="showAll" name="showall" value="Show All">
+                  </div> <!-- Show all Button -->
+                </div>
+            </div> <!-- Search Filter -->
+         </div>
     </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <!-- Filter Section End -->
+
+    <div class="product-section col-xl-12">
+
+      <!-- Product Card -->
+      <div class="card" style="width: 20rem; height: 38rem;" ng-repeat="shoe in shoes">
+        <img class="card-img-top" src="{{ shoe.image }}" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title shoe-name">{{ shoe.name }}</h4>
+          <p class="card-text shoe-gender">{{ shoe.gender }}</p>
+          <p class="card-text shoe-colour">{{ shoe.colour }}</p>
+          <h4 class="card-title shoe-price">{{ shoe.price }}</h4>
+          <a href="#"><button class="buy-now-btn">Add to Cart</button></a>
+        </div>
       </div>
+      <!-- End of Product Card -->
+
     </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 20rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h4 class="card-title">Card title</h4>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
+    
 </div> 
+<!-- End of Shoes Products Container -->
+
+<!-- Footer Products Page -->
+<div class="col-xl-12" ng-include='footer'></div>

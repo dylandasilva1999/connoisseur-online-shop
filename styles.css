@@ -347,11 +347,11 @@ HEADER
   z-index: 1;
 }
 
-.welcome-blog-text {
+.collection-text {
   height: auto;
 }
 
-#welcome-text {
+#collection-text {
   font-size: 35px;
   text-transform: uppercase;
   font-family: "sofia_prolight";
@@ -398,8 +398,8 @@ HEADER
   margin-left: 75%;
 }
 
-button.write-blog-btn {
-  width: 30%;
+button.get-yours-btn {
+  width: 35%;
 	border-radius: 50px;
 	border: 3px solid #ef3955;
   background: rgba(237, 59, 85, 1);
@@ -415,19 +415,19 @@ button.write-blog-btn {
   margin-bottom: 60px;
 }
 
-button.write-blog-btn {
+button.get-yours-btn {
   transition: all 0.2s ease;
   transition: all 0.4s cubic-bezier(0.65, -0.25, 0.25, 1.95);
 }
 
-button.write-blog-btn:hover, button.write-blog-btn:focus, button.write-blog-btn:active  {
+button.get-yours-btn:hover, button.get-yours-btn:focus, button.get-yours-btn:active  {
   letter-spacing: 0.170rem;
   border: solid 3px #ffffff;
   background: transparent;
   transition: all 0.2s ease;
 }
 
-button.write-blog-btn:hover, button.write-blog-btn:focus, button.write-blog-btn:active {
+button.get-yours-btn:hover, button.get-yours-btn:focus, button.get-yours-btn:active {
   letter-spacing: 0.170rem;
 }
 
@@ -463,6 +463,173 @@ CONTENT
 
 .card {
   float: left;
+  margin-top: 40px;
+  margin-left: 2.5%;
+  border: transparent;
+}
+
+.card-img-top {
+  height: 25vh !important;
+  object-fit: cover;
+}
+
+.content-products {
+  margin-top: 10vh;
+}
+
+.product-section {
+  height: 100vh;
+  margin-top: 20px;
+  margin-bottom: 20vh;
+}
+
+.filter-section {
+  margin-top: 2vh;
+}
+
+.search-filter {
+  margin-top: -5vh;
+  height: 10vh;
+}
+
+.colour {
+  height: 4rem;
+  margin-top: 34px;
+}
+
+.gender {
+  height: 4rem;
+  margin-top: 34px;
+}
+
+.search {
+  height: 4rem;
+  margin-top: 34px;
+}
+
+.show-all-btn {
+  height: 4rem;
+  margin-top: 34px;
+}
+
+.search-bar {
+  width: 70%;
+  border-radius: 0px;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ef3955;
+  padding: 16px;
+}
+
+.search {
+  border: none;
+  background: none;
+}
+
+.search-icon {
+  width: 20px;
+  margin-top: -15vh;
+  margin-left: 480px;
+}
+
+.showAll {
+  height: 40px;
+  width: 78%;
+  background-color: #ef3955;
+  border-color: transparent;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px;
+  transition: all 0.2s ease;
+  position: absolute;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 14px;
+  margin-left: -35%;
+  font-family: "sofia_proregular";
+}
+
+.showAll:hover {
+  letter-spacing: 0.13rem;
+  background: #882030;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.buy-now-btn {
+  height: 40px;
+  width: 86%;
+  background:#ef3955;
+  border: #ef3955;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 5px;
+  transition: all 0.3s ease;
+  position: absolute;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-top: 30px;
+  font-family: "sofia_proregular";
+}
+
+.buy-now-btn:hover {
+  letter-spacing: 0.13rem;
+  background: #ef3955;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+.shoe-name {
+  font-family: "sofia_probold";
+  color: #1e1e1e;
+  font-size: 22px;
+}
+
+.shoe-gender {
+  font-family: "sofia_proregular";
+  margin-top: 10px;
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.shoe-colour {
+  padding: 10px;
+  padding-left: 20px;
+  background-color: rgba(26, 8, 11, 0.3);
+  border-radius: 20px;
+  font-family: "sofia_probold";
+  margin-top: -30px;
+  font-size: 16px !important;
+  color: #ffffff;
+}
+
+.shoe-price {
+  font-family: "sofia_probold";
+  margin-top: -10px !important;
+  font-size: 23px !important;
+  color: rgba(0, 0, 0, 1);
+}
+
+/*
+
+FOOTER
+
+*/
+
+#sticky-footer {
+  width: 100%;
+  height: 5vh;
+  flex-shrink: none;
+  background-color: #ef3955;
+  margin-top: 10vh;
+  color: #ffffff;
+  font-size: 18px;
+  padding-top: 15px;
 }
 
 
@@ -504,9 +671,9 @@ RESPONSIVE MEDIA QUERIES
   .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 30%;
     margin-top: 15px;
-    margin-left: 20%;
+    margin-left: 0%;
   }
   .nav-links li {
     margin-left: 10px;
@@ -523,32 +690,11 @@ RESPONSIVE MEDIA QUERIES
     display: none;
   }
   .logo {
-    margin-left: 12%;
+    margin-left: 0%;
   }
   .logo img {
-    width: 100px;
-    height: 100px;
-  }
-  #logo-text {
-    display: none;
-  }
-  .profile-container {
-    width: 50%;
-    margin-left: 3%;
-  }
-  .profile-img img{
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  .profile-img {
-    margin-left: 28px;
-  }
-  #user-name {
-    float: left;
-    padding-top: 12px;
-    font-size: 18px;
+    width: 120px;
+    height: 120px;
   }
   .divider {
     width: 6px;
@@ -559,21 +705,46 @@ RESPONSIVE MEDIA QUERIES
   }
   .colour-overlay {
     width: 100%;
-    height: 114.5vh;
+    height: 100vh;
     margin-top: -10vh;
     background-color: rgba(0, 0, 0, 0.7);
   }
+  #logo-text {
+    display: none;
+  }
+  #collection-text {
+    font-size: 28px;
+  }
   #welcome-text {
-    font-size: 32px;
+    font-size: 28px;
+    text-transform: uppercase;
   }
-  #creature-heading {
-    font-size: 120px;
+  #connoisseur-heading {
+    font-size: 130px;
+    margin-left: 1%;
   }
-  button.write-blog-btn {
-    width: 30%;
+  #intro-paragraph {
+    width: 90%;
+  }
+  .shoe-image img {
+    height: 80%;
+    width: 70%;
+  }
+  button.get-yours-btn {
+    width: 40%;
+  }
+  .showAll {
+    margin-left: 10%;
+  }
+  .search-bar {
+    width: 85%;
+  }
+  .search-icon {
+    margin-left: 430px;
+    margin-top: -180px;
   }
   .header-content {
-    margin-top: 40vh;
+    margin-top: 34vh;
   }
   .social-media-icons-header {
     margin-top: 40vh;
@@ -581,17 +752,14 @@ RESPONSIVE MEDIA QUERIES
   .scroll-down-icon {
     width: 3%;
     height: 50px;
-    margin-top: 100vh;
+    margin-top: 85vh;
     margin-left: 52.5%;
   }
-  .trending {
-    margin-left: 5.5%;
+  .card {
+    height: 36rem !important;
   }
-  .most-liked {
-    margin-left: 5.5%;
-  }
-  .national {
-    margin-left: 5.5%;
+  #sticky-footer {
+    margin-top: 90vh;
   }
 }
 
@@ -642,20 +810,6 @@ RESPONSIVE MEDIA QUERIES
     width: 50%;
     margin-left: 79%;
   }
-  #user-name {
-    float: left;
-    padding-top: 12px;
-    font-size: 20px;
-  }
-  .profile-img img{
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  .profile-img {
-    margin-left: 22px;
-  }
   #logo-text {
     margin-left: 44%;
     position: absolute;
@@ -673,10 +827,10 @@ RESPONSIVE MEDIA QUERIES
     margin-top: 0vh;
     background-color: rgba(0, 0, 0, 0.7);
   }
-  #welcome-text {
+  #collection-text {
     font-size: 28px;
   }
-  #creature-heading {
+  #connoisseur-heading {
     font-size: 90px;
     text-align: left;
     margin-top: 5vh;
@@ -685,7 +839,7 @@ RESPONSIVE MEDIA QUERIES
     text-align: left;
     font-size: 16px;
   }
-  button.write-blog-btn {
+  button.get-now-btn {
     width: 40%;
     font-size: 12px;
   }
@@ -744,25 +898,6 @@ RESPONSIVE MEDIA QUERIES
   .logo img{
     display: none;
   }
-  .profile-container {
-    width: 50%;
-    margin-left: 70%;
-    margin-top: 25px;
-  }
-  #user-name {
-    float: left;
-    padding-top: 12px;
-    font-size: 20px;
-  }
-  .profile-img img{
-    float: left;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  .profile-img {
-    margin-left: 22px;
-  }
   #logo-text {
     margin-left: 46%;
     position: absolute;
@@ -784,14 +919,14 @@ RESPONSIVE MEDIA QUERIES
   .header-content {
     margin-top: 35vh;
   }
-  #welcome-text {
+  #collection-text {
     font-size: 32px;
     margin-left: 30%;
   }
   .underline {
     margin-left: 26%;
   }
-  #creature-heading {
+  #connoisseur-heading {
     font-size: 120px;
     text-align: center;
     margin-top: 5vh;
@@ -805,7 +940,7 @@ RESPONSIVE MEDIA QUERIES
     text-align: center;
     font-size: 18px;
   }
-  button.write-blog-btn {
+  button.get-now-btn {
     width: 30%;
     font-size: 12px;
     margin-left: 33%;
@@ -865,24 +1000,6 @@ RESPONSIVE MEDIA QUERIES
   .logo img{
     display: none;
   }
-  .profile-container {
-    width: 50%;
-    margin-left: 69%;
-  }
-  #user-name {
-    float: left;
-    padding-top: 10px;
-    font-size: 16px;
-  }
-  .profile-img img{
-    float: left;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-  .profile-img {
-    margin-left: 20px;
-  }
   #logo-text {
     margin-left: 42%;
     position: absolute;
@@ -902,14 +1019,14 @@ RESPONSIVE MEDIA QUERIES
   .header-content {
     margin-top: 38vh;
   }
-  #welcome-text {
+  #collection-text {
     font-size: 28px;
     margin-left: 25%;
   }
   .underline {
     margin-left: 24%;
   }
-  #creature-heading {
+  #connoisseur-heading {
     font-size: 90px;
     text-align: center;
     margin-top: 5vh;
@@ -920,7 +1037,7 @@ RESPONSIVE MEDIA QUERIES
     margin-left: -5%;
     font-size: 16px;
   }
-  button.write-blog-btn {
+  button.get-now-btn {
     width: 50%;
     font-size: 12px;
     margin-left: 22%;
@@ -981,22 +1098,6 @@ RESPONSIVE MEDIA QUERIES
   .logo {
     display: none;
   }
-  .profile-container {
-    width: 50%;
-    margin-left: 35%;
-  }
-  #user-name {
-    float: left;
-    padding-top: 10px;
-    font-size: 16px;
-  }
-  .profile-img img{
-    float: left;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: -15%;
-  }
   .header-image {
     height: 110vh;
   }
@@ -1009,14 +1110,14 @@ RESPONSIVE MEDIA QUERIES
   .header-content {
     margin-top: 25vh;
   }
-  #welcome-text {
+  #collection-text {
     font-size: 20px;
     margin-left: 9%;
   }
   .underline {
     margin-left: 8%;
   }
-  #creature-heading {
+  #connoisseur-heading {
     font-size: 70px;
     text-align: center;
     margin-top: 5vh;
@@ -1027,7 +1128,7 @@ RESPONSIVE MEDIA QUERIES
     margin-left: -5%;
     font-size: 16px;
   }
-  button.write-blog-btn {
+  button.get-now-btn {
     width: 90%;
     font-size: 12px;
     margin-left: 2%;
