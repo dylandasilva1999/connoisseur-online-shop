@@ -50,6 +50,20 @@ app.controller("HomeController", function ($scope) {
 app.controller("AboutUsController", function ($scope) {
     $scope.headerAboutUs = "./templates/components/header-about-us.html";
     $scope.footer = "./templates/components/footer.html";
+    $scope.feedbacks = feedBackArray;
+
+    $scope.required = true;
+
+    $scope.formdata = {
+        category: "Choose a category",
+        rating: "Choose a rating",
+        email: "",
+        content: ""
+    }
+
+    $scope.addFeedback = function(form) {
+        $scope.feedbacks.push({category: $scope.formdata.category, rating: $scope.formdata.rating, email: $scope.formdata.email, content: $scope.formdata.content });
+    };
 });
 
 //Products Controller

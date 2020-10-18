@@ -12,5 +12,5 @@ var shoesArray = [
 ];
 
 var feedBackArray = [
-    {id: 1, rating: "5", content: "Connoisseur is absolutely amazing! Quick and easy to use."}
+    {rating: "5", email: "", category: "Customer Service", content: "Connoisseur is absolutely amazing! Quick and easy to use."},
 ];

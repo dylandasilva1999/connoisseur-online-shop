@@ -5,12 +5,96 @@
 <div class="container content-about-us col-xl-10">
     <div class="row">
         <div class="story-image col-xl-6">
-            <img src="">
+            <img src="../assets/img/josh-marshall-PcI3V1VbbrU-unsplash-01.jpg">
         </div> <!-- End of Story Image -->
-        <div class="story-text col-xl-6"></div>
+        <div class="story-text col-xl-6">
+            <h1 id="story-heading">Our Story</h1>
+            <p id="story-paragraph">
+                Connoisseur started out as a small shop in Pretoria, where we evolved adn grew bigger into what
+                Connoisseur is today! Big E-Commerce company as a reseller of Nike's Premium Shoes! We deliver
+                the best in the business. We as a team are ambitious and ready for anything the world might
+                through at us.<br> 
+                <br>
+                Our Ambition is what got us to where we are now! Small tent shop, advertising working hard
+                we came to our success. The name Connoisseur came from the idea that we would in the future
+                want to sell premium shoes from Nike. The clients that would be these shoes, would then 
+                essentially be Connoisseurs!<br>
+                <br>
+                We want to encourage any new-commers to this type of business to never give up on their
+                dreams on reaching your goal! We are prove that dreams can be met! We are thanking all
+                who made it possible for us to get to this stage of our success!
+            </p>
+        </div> <!-- End of Story Text -->
+
+        <div class="feedback-container col-xl-12">
+            <div class="row">
+
+                <h1 id="feedback-heading">Recent Feedback</h1>
+
+                <div class="feedback-cards-container col-xl-12">
+                    <div class="card feedback-card" style="width: 20rem;" ng-repeat="feedback in feedbacks">
+                        <div class="card-body feedback-card-body">
+                          <h4 class="card-title" id="category">{{ feedback.category }}</h4>
+                          <h6 class="card-subtitle mb-2 text-muted" id="rating">Rating: {{ feedback.rating }} <br/></h6>
+                          <p class="card-text" id="content">{{ feedback.content }}</p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        
     </div><!-- End of Row -->
 </div>
 <!-- End of About Us Container -->
+
+<!-- Modal Start -->
+<div class="modal fade bd-example-modal-lg" id="feedback-form" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="form-container">
+                <form class="feedback-form" name="feedbackForm" ng-submit="addFeedback(feedbackForm)" novalidate>
+                    <h1 id="feedback-give">Give Your Feedback</h1>
+                    <div class="feedback-image"></div>
+                    <input type="email" name="email" placeholder="Your email address" id="email" ng-model="formdata.email">
+                    <span class="error" ng-show="feedbackForm.email.$dirty.required">
+                        Your email address is required
+                    </span>
+                    <span class="error" ng-show="feedbackForm.email.$dirty && feedbackForm.email.$error.email">
+                        This email address is invalid
+                    </span>
+                    <select name="rating" id="rating-drop" ng-model="formdata.rating" required>
+                        <option value="Choose a rating">Choose a rating</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span class="error" ng-show="feedbackForm.rating.$error.required">
+                        Required!
+                    </span> 
+                    <select name="category" id="category" ng-model="formdata.category" required>
+                        <option value="Choose a category">Choose a category</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="Website">Website</option>
+                        <option value="Shoes">Shoes</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span class="error" ng-show="feedbackForm.category.$error.required">
+                        Required!
+                    </span>
+                    <label for="comment" id="comment-label">Enter your comment here</label>
+                    <textarea rows="4" cols="70" name="comment" form="content" ng-model="formdata.content" required></textarea>
+                    <span class="error" ng-show="feedbackForm.comment.$error.required">
+                        Required!
+                    </span>
+                    <button class="feedback-submit-btn" ng-disabled="feedbackForm.$invalid" type="submit">Send Feedback</button>
+                </form>
+            </div> <!--Add Doctor Container-->
+        </div>
+    </div>
+</div>
+<!-- Modal End -->
 
 <!-- Footer About Us Page -->
 <div class="col-xl-12" ng-include='footer'></div>
