@@ -1,5 +1,7 @@
+//Declare the Connoisseur app with AngularJS
 var app = angular.module("connoisseur", ["ngRoute"]);
 
+//Route Function (Provider)
 app.config(function ($routeProvider) {
 
     // Home Page Route
@@ -22,25 +24,42 @@ app.config(function ($routeProvider) {
         controller: "ContactController",
         templateUrl: "templates/contact.html"
     });
+
+    // About Us Route
+    $routeProvider.when("/about", {
+        title: "About",
+        controller: "AboutUsController",
+        templateUrl: "templates/about-us.html"
+    });
 });
 
+//Function to change Title (Extra AngularJS trick)
 app.run(function ($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         $rootScope.title = current.$$route.title;
     });
 });
 
+//Home Controller
 app.controller("HomeController", function ($scope) {
     $scope.headerHome = "./templates/components/header-home.html";
     $scope.footer = "./templates/components/footer.html";
 });
 
+//About Us Controller
+app.controller("AboutUsController", function ($scope) {
+    $scope.headerAboutUs = "./templates/components/header-about-us.html";
+    $scope.footer = "./templates/components/footer.html";
+});
+
+//Products Controller
 app.controller("ProductsController", function ($scope) {
     $scope.headerProducts = "./templates/components/header-products.html";
     $scope.shoes = shoesArray;
     $scope.footer = "./templates/components/footer.html";
 });
 
+//Contact Controller
 app.controller("ContactController", function ($scope) {
     $scope.phoneNumbers = ["(012) 567 8910", "(011) 654 2452"];
     $scope.emailAddresses = {
@@ -53,5 +72,6 @@ app.controller("ContactController", function ($scope) {
     $scope.footer = "./templates/components/footer.html";
 });
 
+//Variables for Phone Numbers and Email Addresses
 var num = phoneNumbers[i];
 var email = emailAddresses[i];

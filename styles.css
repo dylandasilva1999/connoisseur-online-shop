@@ -320,6 +320,17 @@ HEADER
   z-index: -3;
 }
 
+.header-image-about {
+  background-image: url("./assets/img/rex-tavanh-GSwMQzHUEXk-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 110%;
+  height: 100vh;
+  margin-left: -5%;
+  z-index: -3;
+}
+
 .colour-overlay {
   width: 100%;
   height: 100vh;
@@ -408,6 +419,14 @@ HEADER
   height: 80%;
   width: 65%;
   margin-left: 75%;
+}
+
+.logo-brand img{
+  position: absolute;
+  margin-top: -5vh;
+  height: 100%;
+  width: 85%;
+  margin-left: 70%;
 }
 
 button.get-yours-btn {

@@ -9,4 +9,8 @@ var shoesArray = [
     {id: 8, name: "Nike Explore Strada", gender: "Men's Shoe", colour: "Black", price: "R 999.95", image: "./assets/img/Nike Explore Strada Black.jpg", rating: ""},
     {id: 9, name: "NikeCourt Air Max", gender: "Men's Shoe", colour: "Green", price: "R 1 799.95", image: "./assets/img/Nike Court AirMax Wing Green.jpg", rating: ""},
     {id: 10, name: "Nike Air Max 270", gender: "Women's Shoe", colour: "Pink", price: "R 2 499.95", image: "./assets/img/Nike Air Max 270 Pink.jpg", rating: ""},
-]
+];
+
+var feedBackArray = [
+    {id: 1, rating: "5", content: "Connoisseur is absolutely amazing! Quick and easy to use."}
+];
