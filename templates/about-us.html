@@ -52,7 +52,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="form-container">
-                <form class="feedback-form" name="feedbackForm" ng-submit="addFeedback(feedbackForm)" novalidate>
+                <form class="feedback-form" name="feedbackForm" ng-submit="addFeedback(feedbackForm)" onsubmit="clearForm()" novalidate>
                     <h1 id="feedback-give">Give Your Feedback</h1>
                     <div class="feedback-image"></div>
                     <input type="email" name="email" placeholder="Your email address" id="email" ng-model="formdata.email">
@@ -82,7 +82,7 @@
                         Please select a category!
                     </span> 
                     <label for="comment" id="comment-label">Enter your comment here</label>
-                    <textarea rows="4" cols="70" name="comment" form="content" ng-model="formdata.content" required></textarea>
+                    <textarea rows="4" cols="70" name="comment" form="content" ng-model="formdata.content" id="feedbackComment" required></textarea>
                     <span class="error" ng-show="feedbackForm.comment.$error.required">
                         Please enter a comment!
                     </span>
