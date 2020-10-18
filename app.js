@@ -42,11 +42,11 @@ app.controller("ProductsController", function ($scope) {
 });
 
 app.controller("ContactController", function ($scope) {
-    $scope.phoneNumbers = ["(012) 333 4444", "(011) 222 5555"];
+    $scope.phoneNumbers = ["(012) 567 8910", "(011) 654 2452"];
     $scope.emailAddresses = {
-        events: "events@shoebox.co.za",
-        feedback: "feedback@shoebox.co.za",
-        general: "info@shoebox.co.za"
+        Events: "events@connoisseur.co.za",
+        Feedback: "feedback@connoisseur.co.za",
+        General: "info@connoisseur.co.za"
     }
 
     $scope.headerContact = "./templates/components/header-contact.html";

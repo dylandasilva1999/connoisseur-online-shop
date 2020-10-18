@@ -118,6 +118,7 @@ p {
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+  font-family: "sofia_proregular";
 }
 
 li {
@@ -647,6 +648,25 @@ CONTENT
   background-repeat: no-repeat;
   background-size: cover;
   height: 40vh;
+}
+
+.contact-numbers {
+  color: #1e1e1e;
+}
+
+.contact-image {
+  height: 30vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.contact-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 /*

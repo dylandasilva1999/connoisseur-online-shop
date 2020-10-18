@@ -3,12 +3,16 @@
 
     <!-- Contact Container -->
     <div class="container contact col-xl-10">
+        
+        <div class="contact-image col-xl-12">
+            <img src="../assets/img/andy-art-LGylxAvpl3k-unsplash.jpg">
+        </div>
 
         <p>Want to get in touch? Take a look at our details below</p>
 
         <p>Phone Numbers</p>
-        <ul>
-            <li ng-repeat="num in phoneNumbers">{{ num }}</li>
+        <ul >
+            <li ng-repeat="num in phoneNumbers" class="contact-numbers">{{ num }}</li>
         </ul>
 
         <p>Email Address</p>
