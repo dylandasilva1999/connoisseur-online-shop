@@ -876,6 +876,7 @@ select.ng-dirty.ng-invalid {
   font-family: "sofia_probold";
   border-radius: 20px;
   padding: 10px;
+  transition: all 0.3s ease;
 }
 
 .feedback-cards-container {

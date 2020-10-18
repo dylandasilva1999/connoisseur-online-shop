@@ -55,8 +55,8 @@ app.controller("AboutUsController", function ($scope) {
     $scope.required = true;
 
     $scope.formdata = {
-        category: "Choose a category",
-        rating: "Choose a rating",
+        category: "",
+        rating: "",
         email: "",
         content: ""
     }
