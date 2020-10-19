@@ -18,6 +18,13 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/products.html"
     });
 
+    // Product Route
+    $routeProvider.when("/shoe", {
+        title: "Shoe",
+        controller: "SelectedProductController",
+        templateUrl: "templates/individual-product.html"
+    });
+
     // Contact Route
     $routeProvider.when("/contact", {
         title: "Contact",
@@ -71,6 +78,12 @@ app.controller("AboutUsController", function ($scope) {
 app.controller("ProductsController", function ($scope) {
     $scope.headerProducts = "./templates/components/header-products.html";
     $scope.shoes = shoesArray;
+    $scope.footer = "./templates/components/footer.html";
+});
+
+//Individual Product Controller
+app.controller("SelectedProductController", function ($scope, $stateParams) {
+    $scope.headerSelectedProduct = "./templates/components/header-individual-product.html";
     $scope.footer = "./templates/components/footer.html";
 });
 

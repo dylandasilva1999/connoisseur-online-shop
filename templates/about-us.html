@@ -63,6 +63,7 @@
                         This email address is invalid
                     </span>
                     <select name="rating" id="rating-drop" ng-model="formdata.rating" required>
+                        <option value="" disabled selected>Select your option</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -73,6 +74,7 @@
                         Please select a rating!
                     </span> 
                     <select name="category" id="category" ng-model="formdata.category" placeholder="Choose a category" required>
+                        <option value="" disabled selected>Select a category</option>
                         <option value="Customer Service">Customer Service</option>
                         <option value="Website">Website</option>
                         <option value="Shoes">Shoes</option>

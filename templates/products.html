@@ -9,7 +9,7 @@
          <div class="row filter-container">
             <div class="search-filter col-xl-12">
               <div class="row filer-container">
-                  <div class="colour col-xl-3">
+                  <div class="colour col-xl-5">
                       <select name="colour-dropdown" id="colour-dropdown">
                           <option value="Colour" disabled selected>Colour</option>
                           <option value="White">White</option>
@@ -20,7 +20,7 @@
                           <option value="Grey">Grey</option>
                       </select>
                   </div> <!-- Year Dropdown -->
-                  <div class="gender col-xl-3">
+                  <div class="gender col-xl-5">
                       <select name="gender-dropdown" id="gender-dropdown">
                           <option value="Gender" disabled selected>Gender</option>
                           <option value="Men's Shoe">Men's Shoe</option>
@@ -39,7 +39,7 @@
     <div class="product-section col-xl-12">
 
       <!-- Product Card -->
-      <div class="card" style="width: 20rem; height: 38rem;" ng-repeat="shoe in shoes">
+      <a href="#!shoe" ng-click="getId({{shoe.id}})"><div class="card" style="width: 20rem; height: 38rem;" ng-repeat="shoe in shoes">
         <img class="card-img-top" src="{{ shoe.image }}" alt="Card image cap">
         <div class="card-body">
           <h4 class="card-title shoe-name">{{ shoe.name }}</h4>
@@ -49,7 +49,7 @@
           <h4 class="rating"></h4>
           <a href="#"><button class="buy-now-btn">Add to Cart</button></a>
         </div>
-      </div>
+      </div></a>
       <!-- End of Product Card -->
 
     </div>

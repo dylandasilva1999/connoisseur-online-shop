@@ -79,6 +79,7 @@ html {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  outline: none;
 }
 
 body {
@@ -157,9 +158,10 @@ input {
   margin-top: 10px;
 }
 
-.btn:focus, button.get-yours-btn:focus [type="submit"]:focus {
+.feedback-submit-btn:focus, .btn:focus, button.get-yours-btn:focus [type="submit"]:focus {
   outline: none;
 }
+
 
 /*
 
@@ -507,7 +509,7 @@ CONTENT
 .card {
   float: left;
   margin-top: 40px;
-  margin-left: 2.5%;
+  margin-left: 3%;
   border: transparent;
 }
 
