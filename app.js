@@ -21,7 +21,7 @@ app.config(function ($routeProvider) {
     // Product Route
     $routeProvider.when("/shoe", {
         title: "Shoe",
-        controller: "SelectedProductController",
+        controller: "ProductsController",
         templateUrl: "templates/individual-product.html"
     });
 
@@ -77,12 +77,19 @@ app.controller("AboutUsController", function ($scope) {
 //Products Controller
 app.controller("ProductsController", function ($scope) {
     $scope.headerProducts = "./templates/components/header-products.html";
+    $scope.headerSelectedProduct = "./templates/components/header-individual-product.html";
     $scope.shoes = shoesArray;
     $scope.footer = "./templates/components/footer.html";
+
+    $scope.getShoe = function() {
+        console.log(this.shoe);
+        return $scope.shoeDetails = this.shoe;
+    }
 });
 
+
 //Individual Product Controller
-app.controller("SelectedProductController", function ($scope, $stateParams) {
+app.controller("SelectedProductController", function ($scope) {
     $scope.headerSelectedProduct = "./templates/components/header-individual-product.html";
     $scope.footer = "./templates/components/footer.html";
 });

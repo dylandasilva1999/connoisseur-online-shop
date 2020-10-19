@@ -13,4 +13,8 @@ var shoesArray = [
 
 var feedBackArray = [
     {rating: "5", email: "", category: "Customer Service", content: "Connoisseur is absolutely amazing! Quick and easy to use."},
+    {rating: "3", email: "", category: "Website", content: "The website is well designed!, little tweaks needed"},
+    {rating: "2", email: "", category: "Other", content: "The delivery system is a bit slow, maybe improve communication"},
+    {rating: "3", email: "", category: "Shoes", content: "Shoes are of high quality,they have a premium feel to them"},
+    {rating: "4", email: "", category: "Customer Service", content: "Great engaging customer support, always happy to assist"},
 ];
