@@ -19,7 +19,7 @@ app.config(function ($routeProvider) {
     });
 
     // Product Route
-    $routeProvider.when("/shoe", {
+    $routeProvider.when("/shoe/:id", {
         title: "Shoe",
         controller: "ProductsController",
         templateUrl: "templates/individual-product.html"
@@ -81,17 +81,19 @@ app.controller("ProductsController", function ($scope) {
     $scope.shoes = shoesArray;
     $scope.footer = "./templates/components/footer.html";
 
-    $scope.getShoe = function() {
-        console.log(this.shoe);
-        return $scope.shoeDetails = this.shoe;
+    $scope.productClicked = function(event) {
+        console.log("hello" + event.target.id);
     }
 });
 
 
 //Individual Product Controller
-app.controller("SelectedProductController", function ($scope) {
+app.controller("SelectedProductController", function ($scope, $routeParams) {
     $scope.headerSelectedProduct = "./templates/components/header-individual-product.html";
     $scope.footer = "./templates/components/footer.html";
+
+    $scope.shoeDetail = findProduct($routeParams.id); 
+    console.log($routeParams.id);
 });
 
 //Contact Controller

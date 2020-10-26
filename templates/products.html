@@ -39,10 +39,10 @@
     <div class="product-section col-xl-12">
 
       <!-- Product Card -->
-      <a href="#!shoe" ng-click="getShoe(shoe)"><div class="card" style="width: 20rem; height: 38rem;" ng-repeat="shoe in shoes">
+      <a href="#!shoe/{{shoe.id}}" ng-click="getShoe(shoe)"><div class="card" style="width: 20rem; height: 38rem;" ng-repeat="shoe in shoes" id="shoe.id" ng-click="productClicked($event)">
         <img class="card-img-top" src="{{ shoe.image }}" alt="Card image cap">
         <div class="card-body">
-          <h4 class="card-title shoe-name">{{ shoe.id }}</h4></a>
+          <!--<h4 class="card-title shoe-name">{{ shoe.id }}</h4></a>-->
           <h4 class="card-title shoe-name">{{ shoe.name }}</h4>
           <p class="card-text shoe-gender">{{ shoe.gender }}</p>
           <p class="card-text shoe-colour">{{ shoe.colour }}</p>

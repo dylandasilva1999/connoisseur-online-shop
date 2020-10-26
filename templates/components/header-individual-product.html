@@ -32,29 +32,15 @@
                 </div>
             </nav> <!-- End of Navigation -->
 
-            <div class="header-content col-xl-6 col-10 animate__animated animate__fadeInDown" ng-controller="ProductsController as ProductCtrl">
+            <div class="header-content col-xl-6 col-10 animate__animated animate__fadeInDown" ng-controller="SelectedProductController as SelectedProductCtrl">
 
-                <div class="shoe-image animate__fadeInDown">
-                    <a href="https://www.nike.com/za/u/custom-nike-blazer-mid-77-by-you-10000937/1655194749"><img src="../../assets/img/header-image-home.png"></a>
+                <div class="shoe-image-detail animate__fadeInDown">
+                    <img src="{{shoeDetail.detailImage}}">
                 </div> <!-- Shoe Image -->
 
-                <div class="welcome-blog-text col-xl-6">
-                    <h4 id="welcome-text">{{ shoeDetails.name }}</h4>
-                    <div class="underline col-xl-5 col-8 col-sm-5"></div>
-                </div> <!-- Welcome Blog Container -->
-
-                <div class="connoisseur-heading">
-                    <h1 id="connoisseur-heading">Hello</h1>
+                <div class="shoe-name">
+                    <h1 id="shoe-name">{{shoeDetail.name}}</h1>
                 </div> <!-- Creature Blog Heading Container -->
-
-                <div class="intro-paragraph-header col-xl-8">
-                    <p id="intro-paragraph">
-                        Connoisseur is a luxurious online shoe shop located in the mid of beautiful Johannesburg!
-                        We offer the best nike products at premium prices for those shoe enthusiasts. 
-                    </p>
-                </div> <!-- Intro Paragraph Header -->
-
-                <a href="#search"><button class="get-yours-btn">Add to cart</button></a>
 
             </div> <!-- Header Content -->
 
