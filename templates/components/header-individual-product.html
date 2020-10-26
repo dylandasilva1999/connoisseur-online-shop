@@ -32,6 +32,14 @@
                 </div>
             </nav> <!-- End of Navigation -->
 
+            <div class="social-media-icons-header d-none d-xl-block animate__animated animate__fadeInDown">
+
+                <a href="https://www.instagram.com/"><img src="./assets/img/instagram.svg"></a>
+                <a href="https://www.facebook.com/"><img src="./assets/img/facebook.svg"></a>
+                <a href="https://twitter.com/"><img src="./assets/img/twitter.svg"></a>
+
+            </div> <!-- Social Media Icons Div-->
+
             <div class="header-content col-xl-6 col-10 animate__animated animate__fadeInDown" ng-controller="SelectedProductController as SelectedProductCtrl">
 
                 <div class="shoe-image-detail animate__fadeInDown">
@@ -40,6 +48,8 @@
 
                 <div class="shoe-name">
                     <h1 id="shoe-name">{{shoeDetail.name}}</h1>
+                    <h3 id="shoe-gender">{{shoeDetail.gender}}</h3>
+                    <h3 id="shoe-price">{{shoeDetail.price}}</h3>
                 </div> <!-- Creature Blog Heading Container -->
 
             </div> <!-- Header Content -->

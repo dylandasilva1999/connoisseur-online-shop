@@ -2,10 +2,13 @@
 <div class="col-xl-12" ng-include='headerSelectedProduct'></div>
 
 <!-- Content Details Page -->
-<div class="container content-selected-product col-xl-10">
+<div class="container content-selected-product col-xl-10" ng-controller="SelectedProductController as SelectedProductCtrl">
 
     <div class="col-xl-12 product-details">
-        
+        <h1 id="shoe-name-content">{{shoeDetail.name}}</h1>
+        <div class="col-xl-12 line"></div>
+        <p id="description-detail">{{shoeDetail.description}}</p>
+        <h2 id="shoe-colour-detail">Colour: {{shoeDetail.colour}}</h2>
     </div> <!-- End of Product Details -->
 
 </div>
