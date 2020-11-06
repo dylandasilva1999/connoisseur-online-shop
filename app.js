@@ -53,16 +53,18 @@ app.controller('CartController', ['$scope', '$cookies', function($scope, $cookie
     $scope.cart = [];
     $scope.total = 0;
 
-    if ($cookieStore.get('cart') !== null) {
-        $scope.cart =  $cookieStore.get('cart');
-    }
+    console.log($scope.cart)
+    
+    // if ($cookies.get('cart') !== null) {
+    //     $scope.cart = $cookies.get('cart');
+    // }
     
     if(!angular.isUndefined($cookies.get('total'))){
       $scope.total = parseFloat($cookies.get('total'));
     }
 
     if (!angular.isUndefined($cookies.get('cart'))) {
-        $scope.cart =  $cookies.getObject('cart');
+        $scope.cart = $cookies.getObject('cart');
     }
     
     $scope.addItemToCart = function(shoe){
@@ -95,6 +97,7 @@ app.controller('CartController', ['$scope', '$cookies', function($scope, $cookie
 
         $cookies.put('total', $scope.total,  {'expires': expireDate});
     };
+    
 
     $scope.removeItemCart = function(shoe){
        

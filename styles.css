@@ -587,6 +587,28 @@ CONTENT
   object-fit: cover;
 }
 
+.cart-img-top {
+  height: 15vh !important;
+  object-fit: cover;
+  margin-top: 30px;
+  margin-left: -8%;
+}
+
+.list-group {
+  margin-top: 50px;
+}
+
+.remove {
+  width: 10%;
+  margin-left: 2%;
+  margin-top: 50px;
+}
+
+.total {
+  margin-top: 30px;
+  font-size: 30px;
+}
+
 .content-products {
   margin-top: 10vh;
 }
@@ -703,6 +725,23 @@ CONTENT
   color: #1e1e1e;
   font-size: 22px;
 }
+
+.shoe-name-cart {
+  font-family: "sofia_probold";
+  color: #1e1e1e;
+  font-size: 22px;
+  float: left;
+}
+
+.shoe-price-cart {
+  font-family: "sofia_probold";
+  color: #1e1e1e;
+  font-size: 22px;
+  position: absolute;
+  margin-left: 9.5%;
+  margin-top: -150px;
+}
+
 
 #shoe-gender {
   color: #fff;

@@ -1,15 +1,17 @@
 <!-- Shoes Products Container -->
-<div class="container content-products col-xl-10" ng-controller="StoreController">
+<div class="container product-section col-xl-10" ng-controller="CartController as CartCtrl">
 
     <div ng-show="cart.length !== 0">
         <h1>SUMMARY OF CART</h1>
         <ul class="list-group">
           <li class="list-group-item" ng-repeat="c in cart">
-            <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>| {{c.price*c.count | currency}}</h4>
-            <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+            <img class="cart-img-top" src="{{ c.image }}" alt="Card image cap">
+            <h4 class="cart-title shoe-name-cart">{{ c.name }}</h4>
+            <h4 class="cart-title shoe-price-cart">{{ c.price | currency : 'R' : 2 }}</h4>
+            <input class="btn btn-danger remove" type="button" ng-click="removeItemCart(c)" value="Remove" />
           </li>
         </ul>
-        Total : {{total | currency}}
+        <h1 class="total">Total : {{total | currency : 'R' : 2}}</h1>
     </div>
     
 </div>
