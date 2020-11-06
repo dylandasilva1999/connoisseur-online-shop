@@ -1,0 +1,16 @@
+<!-- Shoes Products Container -->
+<div class="container content-products col-xl-10" ng-controller="StoreController">
+
+    <div ng-show="cart.length !== 0">
+        <h1>SUMMARY OF CART</h1>
+        <ul class="list-group">
+          <li class="list-group-item" ng-repeat="c in cart">
+            <h4>{{c.name}} | <span style="color:blue"> {{c.count}} </span>| {{c.price*c.count | currency}}</h4>
+            <input class="btn btn-danger" type="button" ng-click="removeItemCart(c)" value="Remove" />
+          </li>
+        </ul>
+        Total : {{total | currency}}
+    </div>
+    
+</div>
+

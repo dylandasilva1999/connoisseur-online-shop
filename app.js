@@ -1,5 +1,5 @@
 //Declare the Connoisseur app with AngularJS
-var app = angular.module("connoisseur", ["ngRoute"]);
+var app = angular.module("connoisseur", ["ngRoute", "ngCookies"]);
 
 //Route Function (Provider)
 app.config(function ($routeProvider) {
@@ -38,7 +38,91 @@ app.config(function ($routeProvider) {
         controller: "AboutUsController",
         templateUrl: "templates/about-us.html"
     });
+
+    // Cart Page
+    $routeProvider.when("/cart", {
+        title: "Cart",
+        controller: "CartController",
+        templateUrl: "templates/cart.html"
+    });
 });
+
+app.controller('CartController', ['$scope', '$cookies', function($scope, $cookies){
+	
+    $scope.shoes = shoesArray;
+    $scope.cart = [];
+    $scope.total = 0;
+
+    if ($cookieStore.get('cart') !== null) {
+        $scope.cart =  $cookieStore.get('cart');
+    }
+    
+    if(!angular.isUndefined($cookies.get('total'))){
+      $scope.total = parseFloat($cookies.get('total'));
+    }
+
+    if (!angular.isUndefined($cookies.get('cart'))) {
+        $scope.cart =  $cookies.getObject('cart');
+    }
+    
+    $scope.addItemToCart = function(shoe){
+      
+        if ($scope.cart.length === 0){
+            shoe.count = 1;
+            $scope.cart.push(shoe);
+        } else {
+            var repeat = false;
+            for(var i = 0; i< $scope.cart.length; i++){
+                if($scope.cart[i].id === shoe.id){
+                    repeat = true;
+                    $scope.cart[i].count +=1;
+                }
+            }
+            if (!repeat) {
+                shoe.count = 1;
+                $scope.cart.push(shoe);	
+            }
+        }
+
+        var expireDate = new Date();
+        expireDate.setDate(expireDate.getDate() + 1);
+
+        $cookies.putObject('cart', $scope.cart,  {'expires': expireDate});
+        
+        $scope.cart = $cookies.getObject('cart');
+     
+        $scope.total += parseFloat(shoe.price);
+
+        $cookies.put('total', $scope.total,  {'expires': expireDate});
+    };
+
+    $scope.removeItemCart = function(shoe){
+       
+        if(shoe.count > 1){
+            shoe.count -= 1;
+            var expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 1);
+            $cookies.putObject('cart', $scope.cart, {'expires': expireDate});
+            $scope.cart = $cookies.getObject('cart');
+        }
+        else if(shoe.count === 1){
+            var index = $scope.cart.indexOf(shoe);
+            $scope.cart.splice(index, 1);
+
+            expireDate = new Date();
+            expireDate.setDate(expireDate.getDate() + 1);
+
+            $cookies.putObject('cart', $scope.cart, {'expires': expireDate});
+
+            $scope.cart = $cookies.getObject('cart'); 
+        }
+       
+        $scope.total -= parseFloat(shoe.price);
+        $cookies.put('total', $scope.total,  {'expires': expireDate});
+       
+    };
+
+}]);
 
 //Function to change Title (Extra AngularJS trick)
 app.run(function ($rootScope) {
@@ -48,9 +132,23 @@ app.run(function ($rootScope) {
 });
 
 //Home Controller
-app.controller("HomeController", function ($scope) {
+app.controller("HomeController", function ($scope, $http) {
     $scope.headerHome = "./templates/components/header-home.html";
     $scope.footer = "./templates/components/footer.html";
+
+    $scope.liveTime
+    $scope.errorMessage = null;
+
+    var configuration = {
+        method: "GET",
+        url: ""
+    }
+
+    $http(configuration).then(function(response) {
+        $scope
+    }, function(error) {
+        $scope.errorMessage = error.status + ": " + error.statusText;
+    });
 });
 
 //About Us Controller
@@ -60,6 +158,10 @@ app.controller("AboutUsController", function ($scope) {
     $scope.feedbacks = feedBackArray;
 
     $scope.required = true;
+
+    $scope.starRatingWithinRange = function(index) {
+        return (index <= parseInt($scope.formdata.starRating));
+    };
 
     $scope.formdata = {
         category: "",
