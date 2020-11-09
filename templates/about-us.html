@@ -32,7 +32,7 @@
                 <h1 id="feedback-heading">Recent Feedback</h1>
 
                 <div class="feedback-cards-container col-xl-12">
-                    <div class="card feedback-card" style="width: 20rem;" ng-repeat="feedback in feedbacks" ng-class="border; feedback.isCategory">
+                    <div class="card feedback-card" style="width: 20rem;" ng-repeat="feedback in feedbacks">
                         <div class="card-body feedback-card-body">
                           <h4 class="card-title" id="category">{{ feedback.category }}</h4>
                           <h6 class="card-subtitle mb-2 text-muted" id="rating">Rating: {{ feedback.rating }} <br/></h6>

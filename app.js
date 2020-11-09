@@ -51,11 +51,11 @@ app.factory("MenuService", function($http) {
     var service = {};
     
     service.data = {
-        copyright: [],
+        border: [],
         errorMessage: null
     };
 
-    service.getCopyright = function() {
+    service.getBorder = function() {
 
         var configuration = {
             method: "GET",
@@ -63,7 +63,7 @@ app.factory("MenuService", function($http) {
         };
 
         $http(configuration).then(function(response) {
-            service.data.copyright = response.data;
+            service.data.border = response.data;
         }, function(error) {
             service.data.errorMessage = error.status + ": " + error.statusText;
         });
@@ -199,9 +199,23 @@ app.controller("AboutUsController", function ($scope) {
         content: ""
     }
 
-    $scope.addFeedback = function(form) {
-        $scope.feedbacks.push({category: $scope.formdata.category, rating: $scope.formdata.rating, email: $scope.formdata.email, content: $scope.formdata.content });
-    };
+    // $scope.addFeedback = function(form) {
+    //     $scope.feedbacks.push({category: $scope.formdata.category, rating: $scope.formdata.rating, email: $scope.formdata.email, content: $scope.formdata.content });
+    // };
+
+    // $scope.border = [];
+    // $scope.errorMessage = null;
+
+    // var configuration = {
+    //     method: "GET",
+    //     url: "https://httprequest.tiiny.site/"
+    // };
+
+    // $http(configuration).then(function(response) {
+    //     $scope.border = response.data;
+    // }, function(error) {
+    //     $scope.errorMessage = error.status + ": " + error.statusText;
+    // });
 
 });
 
