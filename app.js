@@ -47,6 +47,32 @@ app.config(function ($routeProvider) {
     });
 });
 
+app.factory("MenuService", function($http) {
+    var service = {};
+    
+    service.data = {
+        copyright: [],
+        errorMessage: null
+    };
+
+    service.getCopyright = function() {
+
+        var configuration = {
+            method: "GET",
+            url: "http://127.0.0.1:5500/httpRequest.html"
+        };
+
+        $http(configuration).then(function(response) {
+            service.data.copyright = response.data;
+        }, function(error) {
+            service.data.errorMessage = error.status + ": " + error.statusText;
+        });
+
+    };
+
+    return service;
+});
+
 app.controller('CartController', ['$scope', '$cookies', function($scope, $cookies){
 	
     $scope.shoes = shoesArray;

@@ -742,6 +742,9 @@ CONTENT
   margin-top: -150px;
 }
 
+.border {
+  background-color: #1e1e1e;
+}
 
 #shoe-gender {
   color: #fff;
