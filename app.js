@@ -199,9 +199,9 @@ app.controller("AboutUsController", function ($scope) {
         content: ""
     }
 
-    // $scope.addFeedback = function(form) {
-    //     $scope.feedbacks.push({category: $scope.formdata.category, rating: $scope.formdata.rating, email: $scope.formdata.email, content: $scope.formdata.content });
-    // };
+    $scope.addFeedback = function(form) {
+         $scope.feedbacks.push({category: $scope.formdata.category, rating: $scope.formdata.rating, email: $scope.formdata.email, content: $scope.formdata.content });
+    };
 
     // $scope.border = [];
     // $scope.errorMessage = null;
